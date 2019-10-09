@@ -90,7 +90,7 @@ class Snake {
        rect(body.get(i).x,body.get(i).y,SIZE,SIZE);
      }
      if(dead) {
-       fill(150);
+       fill(140);
      } else {
        fill(255);
      }
@@ -121,9 +121,9 @@ class Snake {
     int len = body.size()-1;
     score++;
     if(!humanPlaying && !modelLoaded) {
-      if(lifeLeft < 500) {
+      if(lifeLeft < 600) {
         if(lifeLeft > 400) {
-           lifeLeft = 500; 
+           lifeLeft = 600; 
         } else {
           lifeLeft+=100;
         }
@@ -257,13 +257,13 @@ class Snake {
            noStroke();
            fill(255,255,51);
            ellipseMode(CENTER);
-           ellipse(pos.x,pos.y,5,5); 
+           ellipse(pos.x,pos.y,8,8); 
         }
         if(bodyFound) {
            noStroke();
            fill(102,0,102);
            ellipseMode(CENTER);
-           ellipse(pos.x,pos.y,5,5); 
+           ellipse(pos.x,pos.y,8,8); 
         }
       }
       pos.add(direction);
@@ -273,7 +273,7 @@ class Snake {
        noStroke();
        fill(0,255,0);
        ellipseMode(CENTER);
-       ellipse(pos.x,pos.y,5,5); 
+       ellipse(pos.x,pos.y,8,8); 
     }
     look[2] = 1/distance;
     return look;
