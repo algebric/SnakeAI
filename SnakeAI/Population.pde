@@ -69,16 +69,8 @@ class Population {
          bestFitness = max;
          bestSnake = snakes[maxIndex].cloneForReplay();
          bestSnakeScore = snakes[maxIndex].score;
-         //samebest = 0;
-         //mutationRate = defaultMutation;
        } else {
          bestSnake = bestSnake.cloneForReplay(); 
-         /*
-         samebest++;
-         if(samebest > 2) {  //if the best snake has remained the same for more than 3 generations, raise the mutation rate
-            mutationRate *= 2;
-            samebest = 0;
-         }*/
        }
    }
    
