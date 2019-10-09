@@ -18,7 +18,7 @@ class Matrix {
    void output() {
       for(int i = 0; i < rows; i++) {
          for(int j = 0; j < cols; j++) {
-            print(matrix[i][j] + " "); 
+            print(matrix[i][j] + "  "); 
          }
          println();
       }
@@ -96,7 +96,7 @@ class Matrix {
          for(int j = 0; j < cols; j++) {
             float rand = random(1);
             if(rand<mutationRate) {
-               matrix[i][j] += randomGaussian()/5;
+               matrix[i][j] += randomGaussian()*0.22;
                
                if(matrix[i][j] > 1) {
                   matrix[i][j] = 1;
