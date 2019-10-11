@@ -27,7 +27,6 @@ class Matrix {
    
    Matrix dot(Matrix n) {
      Matrix result = new Matrix(rows, n.cols);
-     
      if(cols == n.rows) {
         for(int i = 0; i < rows; i++) {
            for(int j = 0; j < n.cols; j++) {
@@ -111,10 +110,8 @@ class Matrix {
    
    Matrix crossover(Matrix partner) {
       Matrix child = new Matrix(rows, cols);
-      
       int randC = floor(random(cols));
       int randR = floor(random(rows));
-      
       for(int i = 0; i < rows; i++) {
          for(int j = 0;  j < cols; j++) {
             if((i  < randR) || (i == randR && j <= randC)) {
