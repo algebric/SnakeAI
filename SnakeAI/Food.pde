@@ -17,7 +17,6 @@ class Food {
        Food clone = new Food();
        clone.pos.x = pos.x;
        clone.pos.y = pos.y;
-       
        return clone;
     }
 }
