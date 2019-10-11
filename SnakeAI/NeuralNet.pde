@@ -29,9 +29,7 @@ class NeuralNet {
   
   float[] output(float[] inputsArr) {
      Matrix inputs = weights[0].singleColumnMatrixFromArray(inputsArr);
-     
      Matrix curr_bias = inputs.addBias();
-     
      for(int i=0; i<hLayers; i++) {
         Matrix hidden_ip = weights[i].dot(curr_bias); 
         Matrix hidden_op = hidden_ip.activate();
